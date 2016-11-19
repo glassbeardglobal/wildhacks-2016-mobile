@@ -9,12 +9,22 @@
 import UIKit
 import LocalAuthentication
 import Alamofire
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            self.authenticate()
+//        }
+        if let nav: UINavigationBar = self.navigationController?.navigationBar {
+            nav.setBackgroundImage(UIImage(), for: .default)
+            nav.shadowImage = UIImage()
+            nav.isTranslucent = true
+            nav.tintColor = UIColor.white
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -149,6 +159,12 @@ class ViewController: UIViewController {
             
         }
         return message
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
 }
 
