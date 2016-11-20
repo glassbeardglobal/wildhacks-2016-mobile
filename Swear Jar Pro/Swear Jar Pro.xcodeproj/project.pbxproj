@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C065DDD1DE189B900A0A7AF /* cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C065DDC1DE189B900A0A7AF /* cookie.png */; };
+		0C065DDF1DE1909A00A0A7AF /* cookieMonster.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C065DDE1DE1909A00A0A7AF /* cookieMonster.png */; };
 		0C4FA6651DE0BAD000F9E6B1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FA6641DE0BAD000F9E6B1 /* Alamofire.framework */; };
 		0C4FA6671DE0BAD900F9E6B1 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FA6661DE0BAD900F9E6B1 /* LocalAuthentication.framework */; };
 		0C4FA6691DE0BE1700F9E6B1 /* fingerprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C4FA6681DE0BE1700F9E6B1 /* fingerprint.png */; };
-		0C5885041DE0CB010076DEE0 /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5885031DE0CB010076DEE0 /* bottle.png */; };
 		0C5885061DE0D65C0076DEE0 /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5885051DE0D65C0076DEE0 /* SwiftKeychainWrapper.framework */; };
+		0C5885081DE0DF8B0076DEE0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5885071DE0DF8B0076DEE0 /* LoginViewController.swift */; };
+		0C58850A1DE0E2B40076DEE0 /* DCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5885091DE0E2B40076DEE0 /* DCKit.framework */; };
+		0C5885141DE153590076DEE0 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5885131DE153590076DEE0 /* SocketIO.framework */; };
 		0C8611F31DE0AAEA00C50037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8611F21DE0AAEA00C50037 /* AppDelegate.swift */; };
 		0C8611F51DE0AAEA00C50037 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8611F41DE0AAEA00C50037 /* ViewController.swift */; };
 		0C8611F81DE0AAEA00C50037 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8611F61DE0AAEA00C50037 /* Main.storyboard */; };
@@ -25,12 +29,16 @@
 /* Begin PBXFileReference section */
 		0198387593E6A671270AD57D /* Pods-Swear Jar Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swear Jar Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swear Jar Pro/Pods-Swear Jar Pro.debug.xcconfig"; sourceTree = "<group>"; };
 		093D699E134CDA4FED2A1AF7 /* Pods-Swear Jar Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swear Jar Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swear Jar Pro/Pods-Swear Jar Pro.release.xcconfig"; sourceTree = "<group>"; };
+		0C065DDC1DE189B900A0A7AF /* cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookie.png; sourceTree = "<group>"; };
+		0C065DDE1DE1909A00A0A7AF /* cookieMonster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookieMonster.png; sourceTree = "<group>"; };
 		0C4FA6641DE0BAD000F9E6B1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Swear_Jar_Pro-gldnzpekvxenwldbcjwagaebtaxo/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		0C4FA6661DE0BAD900F9E6B1 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		0C4FA6681DE0BE1700F9E6B1 /* fingerprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fingerprint.png; sourceTree = "<group>"; };
 		0C5885001DE0C5A20076DEE0 /* Swear Jar Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Swear Jar Pro.entitlements"; sourceTree = "<group>"; };
-		0C5885031DE0CB010076DEE0 /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
 		0C5885051DE0D65C0076DEE0 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Swear_Jar_Pro-gldnzpekvxenwldbcjwagaebtaxo/Build/Products/Debug-iphoneos/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"; sourceTree = "<group>"; };
+		0C5885071DE0DF8B0076DEE0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C5885091DE0E2B40076DEE0 /* DCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DCKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Swear_Jar_Pro-gldnzpekvxenwldbcjwagaebtaxo/Build/Products/Debug-iphoneos/DCKit/DCKit.framework"; sourceTree = "<group>"; };
+		0C5885131DE153590076DEE0 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Swear_Jar_Pro-gldnzpekvxenwldbcjwagaebtaxo/Build/Products/Debug-iphoneos/Socket.IO-Client-Swift/SocketIO.framework"; sourceTree = "<group>"; };
 		0C8611EF1DE0AAEA00C50037 /* Swear Jar Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swear Jar Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8611F21DE0AAEA00C50037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C8611F41DE0AAEA00C50037 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5885141DE153590076DEE0 /* SocketIO.framework in Frameworks */,
+				0C58850A1DE0E2B40076DEE0 /* DCKit.framework in Frameworks */,
 				0C5885061DE0D65C0076DEE0 /* SwiftKeychainWrapper.framework in Frameworks */,
 				0C4FA6671DE0BAD900F9E6B1 /* LocalAuthentication.framework in Frameworks */,
 				0C4FA6651DE0BAD000F9E6B1 /* Alamofire.framework in Frameworks */,
@@ -83,9 +93,11 @@
 				0C5885001DE0C5A20076DEE0 /* Swear Jar Pro.entitlements */,
 				0C8611F21DE0AAEA00C50037 /* AppDelegate.swift */,
 				0C8611F41DE0AAEA00C50037 /* ViewController.swift */,
+				0C065DDC1DE189B900A0A7AF /* cookie.png */,
 				0C4FA6681DE0BE1700F9E6B1 /* fingerprint.png */,
-				0C5885031DE0CB010076DEE0 /* bottle.png */,
+				0C065DDE1DE1909A00A0A7AF /* cookieMonster.png */,
 				0C8611F61DE0AAEA00C50037 /* Main.storyboard */,
+				0C5885071DE0DF8B0076DEE0 /* LoginViewController.swift */,
 				0C8611FC1DE0AAEA00C50037 /* Assets.xcassets */,
 				0C8611FE1DE0AAEA00C50037 /* LaunchScreen.storyboard */,
 				0C8612011DE0AAEA00C50037 /* Info.plist */,
@@ -97,6 +109,8 @@
 		0C9DB85C1DE0B7380045D94E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C5885131DE153590076DEE0 /* SocketIO.framework */,
+				0C5885091DE0E2B40076DEE0 /* DCKit.framework */,
 				0C5885051DE0D65C0076DEE0 /* SwiftKeychainWrapper.framework */,
 				0C4FA6661DE0BAD900F9E6B1 /* LocalAuthentication.framework */,
 				0C4FA6641DE0BAD000F9E6B1 /* Alamofire.framework */,
@@ -184,10 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8612001DE0AAEA00C50037 /* LaunchScreen.storyboard in Resources */,
+				0C065DDF1DE1909A00A0A7AF /* cookieMonster.png in Resources */,
 				0C8611FD1DE0AAEA00C50037 /* Assets.xcassets in Resources */,
 				0C4FA6691DE0BE1700F9E6B1 /* fingerprint.png in Resources */,
 				0C8611F81DE0AAEA00C50037 /* Main.storyboard in Resources */,
-				0C5885041DE0CB010076DEE0 /* bottle.png in Resources */,
+				0C065DDD1DE189B900A0A7AF /* cookie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5885081DE0DF8B0076DEE0 /* LoginViewController.swift in Sources */,
 				0C8611F51DE0AAEA00C50037 /* ViewController.swift in Sources */,
 				0C8611F31DE0AAEA00C50037 /* AppDelegate.swift in Sources */,
 				0C8611FB1DE0AAEA00C50037 /* Swear_Jar_Pro.xcdatamodeld in Sources */,

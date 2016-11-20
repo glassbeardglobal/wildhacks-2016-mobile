@@ -10,9 +10,13 @@ import UIKit
 import LocalAuthentication
 import Alamofire
 import SwiftKeychainWrapper
+import SocketIO
+import Foundation
 
 class ViewController: UIViewController {
+    let socket = SocketIOClient(socketURL: URL(string: "https://sjback.herokuapp.com")!)
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,15 +29,27 @@ class ViewController: UIViewController {
             nav.isTranslucent = true
             nav.tintColor = UIColor.white
         }
+        self.addHandlers()
+        self.socket.connect()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet weak var failureLabel: UILabel!
 
     @IBAction func touchIDButton(_ sender: UIButton) {
+//        self.socket.emit("chat message", "JJ sucks dick")
         authenticate()
+    }
+    
+    func addHandlers() {
+        self.socket.onAny{print("Got event: \($0.event), with items: \($0.items)")}
+        self.socket.on("push to mobile") {_,_ in 
+            self.authenticate()
+        }
     }
     
     func authenticate() {
@@ -52,28 +68,21 @@ class ViewController: UIViewController {
         // 3. Check the fingerprint
         authenticationContext.evaluatePolicy(
             .deviceOwnerAuthenticationWithBiometrics,
-            localizedReason: "Only awesome people are allowed",
+            localizedReason: "Please authenticate using Touch ID",
             reply: { [unowned self] (success, error) -> Void in
                 if success {
-                    print("Success")
-                    Alamofire.request("https://httpbin.org/get").responseJSON(completionHandler: { (response: DataResponse<Any>) in
-                        print(response.request)  // original URL request
-                        print(response.response) // HTTP URL response
-                        print(response.data)     // server data
-                        print(response.result)   // result of response serialization
-                        
-                        if let JSON = response.result.value {
-                            print("JSON: \(JSON)")
-                        }
-                    })
-                } else {
-                    // Check if there is an error
-                    if let e = error {
-                        let message = self.errorMessageForLAErrorCode(errorCode: e._code)
-                        print(message)
-                        DispatchQueue.main.async {
-                            //update UI
-                        }
+                    print("success")
+                    DispatchQueue.main.async {
+                        self.socket.emit("push to web")
+                        self.performSegue(withIdentifier: "authenticatedSegue", sender: self)
+                        self.failureLabel.isHidden = true
+                    }
+                } else if let e = error {
+                    let message = self.errorMessageForLAErrorCode(errorCode: e._code)
+                    print(message)
+                    DispatchQueue.main.async {
+                        self.socket.emit("chat message", "failure")
+                        self.failureLabel.isHidden = false
                     }
                 }
         })
@@ -137,16 +146,9 @@ class ViewController: UIViewController {
             
         case LAError.touchIDLockout.rawValue:
             message = "Too many failed attempts."
-//            showAlertWithTitle(title: "Too many attempts", message: "Please log in with username and password")
-//            DispatchQueue.main.async {
-//                self.touchIDButtonOutlet.isHidden = true
-//                self.usernameTextField.isHidden = false
-//                self.passwordTextField.isHidden = false
-//            }
             
         case LAError.touchIDNotAvailable.rawValue:
             message = "TouchID is not available on the device"
-            
             
         case LAError.userCancel.rawValue:
             message = "The user did cancel"
@@ -165,6 +167,21 @@ class ViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+        
+        if(segue.identifier == "logInSegue") {
+            guard let svc = segue.destination as? LoginViewController else {
+                print("svc not found")
+                return
+            }
+            svc.loginState = true
+        }
+        if(segue.identifier == "signUpSegue") {
+            guard let svc = segue.destination as? LoginViewController else {
+                print("svc not found")
+                return
+            }
+            svc.loginState = false
+        }
     }
 }
 

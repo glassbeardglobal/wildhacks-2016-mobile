@@ -5,5 +5,6 @@ use_frameworks!
 target 'Swear Jar Pro' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftKeychainWrapper'
-
+    pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'
+    pod 'Socket.IO-Client-Swift'
 end

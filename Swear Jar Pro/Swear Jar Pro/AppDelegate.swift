@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import SocketIO
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if granted {
                 UIApplication.shared.registerForRemoteNotifications()
             }
+        }
+        if let userid = UserDefaults.standard.object(forKey: "userID") as? String{
+            let socket = SocketIOClient(socketURL: URL(string: "https://sjback.herokuapp.com")!)
+            socket.emit("register mobile", userid)
         }
         return true
     }
@@ -100,8 +105,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        for i in 0..<deviceToken.count {
 //            token = token + String(format: "%02.2hhx", arguments: [deviceToken[i]])
 //        }
-        let token = String(data: deviceToken.base64EncodedData(), encoding: .utf8)?.trimmingCharacters(in: CharacterSet.whitespaces).trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
-        print(token!)
+        if let token = UserDefaults.standard.object(forKey: "token") as? String {
+            print(token)
+        } else {
+            let token = String(data: deviceToken.base64EncodedData(), encoding: .utf8)?.trimmingCharacters(in: CharacterSet.whitespaces).trimmingCharacters(in: CharacterSet(charactersIn: "<>"))
+            UserDefaults.standard.set(token, forKey: "token")
+            print(UserDefaults.standard.object(forKey: "token") as! String)
+        }
     }
 }
 

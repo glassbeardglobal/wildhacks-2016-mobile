@@ -21,53 +21,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul3-Dz-mWb">
-                                <rect key="frame" x="155" y="164" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-43-dft">
+                                <rect key="frame" x="37" y="607" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.0" green="0.51764705879999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mmR-lX-6cj" kind="show" identifier="logInSegue" id="OLy-jz-YBB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Cookie Jar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-U6-XLm">
+                                <rect key="frame" x="87" y="260" width="200" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="B96-Hb-PaX"/>
-                                    <constraint firstAttribute="width" constant="64" id="P3Q-lV-Yze"/>
+                                    <constraint firstAttribute="height" constant="21" id="VKJ-Pb-vYb"/>
+                                    <constraint firstAttribute="width" constant="200" id="srk-IB-Oxf"/>
                                 </constraints>
-                                <state key="normal" image="fingerprint.png"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prepare for good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5D-dH-6JZ">
+                                <rect key="frame" x="87" y="289" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JXr-rZ-0zb"/>
+                                    <constraint firstAttribute="height" constant="21" id="tem-1I-UEH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqV-dz-SVJ" customClass="DCBorderedButton" customModule="DCKit">
+                                <rect key="frame" x="37" y="559" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" red="0.0" green="0.51764705882352935" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mmR-lX-6cj" kind="show" identifier="signUpSegue" id="Keo-Xf-EdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul3-Dz-mWb">
+                                <rect key="frame" x="139" y="144" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="B96-Hb-PaX"/>
+                                    <constraint firstAttribute="width" constant="96" id="P3Q-lV-Yze"/>
+                                </constraints>
+                                <state key="normal" image="cookie.png"/>
                                 <connections>
                                     <action selector="touchIDButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YzI-tA-tVg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqV-dz-SVJ">
-                                <rect key="frame" x="136" y="617" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="14"/>
-                                <state key="normal" title="Sign up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-43-dft">
-                                <rect key="frame" x="136" y="579" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="14"/>
-                                <state key="normal" title="Log in">
-                                    <color key="titleColor" red="0.0" green="0.66361850500106812" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mmR-lX-6cj" kind="show" id="OLy-jz-YBB"/>
-                                </connections>
-                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authentication failed, please try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xre-nu-xIT">
+                                <rect key="frame" x="100" y="318" width="175" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="4gc-Eq-rKC"/>
+                                    <constraint firstAttribute="height" constant="51" id="Wlp-q4-PeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ul3-Dz-mWb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="D9g-Hi-ucH"/>
+                            <constraint firstItem="ux2-U6-XLm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gc-kf-TqS"/>
+                            <constraint firstItem="xre-nu-xIT" firstAttribute="top" secondItem="G5D-dH-6JZ" secondAttribute="bottom" constant="8" id="AYH-73-NN4"/>
+                            <constraint firstItem="ul3-Dz-mWb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="D9g-Hi-ucH"/>
+                            <constraint firstItem="ux2-U6-XLm" firstAttribute="top" secondItem="ul3-Dz-mWb" secondAttribute="bottom" constant="20" id="JBz-fC-vuo"/>
                             <constraint firstItem="ul3-Dz-mWb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LqN-0D-P5J"/>
+                            <constraint firstItem="G5D-dH-6JZ" firstAttribute="top" secondItem="ux2-U6-XLm" secondAttribute="bottom" constant="8" id="Z8U-O9-0I0"/>
+                            <constraint firstItem="G5D-dH-6JZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mBp-mb-9gs"/>
+                            <constraint firstItem="xre-nu-xIT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oVS-In-GJq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="awX-vK-rL8"/>
+                    <connections>
+                        <outlet property="failureLabel" destination="xre-nu-xIT" id="jYD-Ar-eML"/>
+                        <segue destination="iOA-TU-OPT" kind="show" identifier="authenticatedSegue" id="zfv-BV-pW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="100.29985007496252"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Frn-MS-TSf">
             <objects>
-                <viewController id="mmR-lX-6cj" sceneMemberID="viewController">
+                <viewController id="mmR-lX-6cj" customClass="LoginViewController" customModule="Swear_Jar_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pii-hE-znP"/>
                         <viewControllerLayoutGuide type="bottom" id="of7-Th-Zin"/>
@@ -75,12 +133,137 @@
                     <view key="view" contentMode="scaleToFill" id="oQ1-ZP-u3X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dOR-gH-zOQ">
+                                <rect key="frame" x="36" y="191" width="303" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="5zH-by-Nfc"/>
+                                    <constraint firstAttribute="height" constant="28" id="AdY-UB-Wfo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-9T-sEY">
+                                <rect key="frame" x="36" y="219" width="303" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4QF-uq-6Fr"/>
+                                    <constraint firstAttribute="width" constant="303" id="dgD-rY-a45"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-tO-oPT" customClass="DCBorderedButton" customModule="DCKit">
+                                <rect key="frame" x="36" y="302" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3II-L5-Ehz"/>
+                                    <constraint firstAttribute="width" constant="303" id="dg9-x6-4Pq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <state key="normal" title="CreateAccount/Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" red="0.0" green="0.51764705882352935" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueButton:" destination="mmR-lX-6cj" eventType="touchUpInside" id="CzV-Ox-HBP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LetsGetStarted/EnterUsernamePassword" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-8Y-Zl0">
+                                <rect key="frame" x="17" y="124" width="340" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="W7M-lw-nmU"/>
+                                    <constraint firstAttribute="height" constant="24" id="oGu-KP-DCE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EnterTheFollowing/ToLogIn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-Zv-zSV">
+                                <rect key="frame" x="98" y="148" width="178" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="McM-ha-Sic"/>
+                                    <constraint firstAttribute="height" constant="24" id="lAQ-oU-XBA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="79R-vm-poW">
+                                <rect key="frame" x="36" y="247" width="303" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="303" id="6Go-eg-NxD"/>
+                                    <constraint firstAttribute="height" constant="28" id="Cv6-vZ-oJJ"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="of7-Th-Zin" firstAttribute="top" secondItem="Lgn-tO-oPT" secondAttribute="bottom" constant="325" id="3oy-xD-oRu"/>
+                            <constraint firstItem="dOR-gH-zOQ" firstAttribute="top" secondItem="pii-hE-znP" secondAttribute="bottom" constant="127" id="9Si-hM-k9w"/>
+                            <constraint firstItem="VsD-9T-sEY" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="EH7-UF-zH9"/>
+                            <constraint firstItem="Lgn-tO-oPT" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="OKP-6m-D4Z"/>
+                            <constraint firstItem="79R-vm-poW" firstAttribute="top" secondItem="VsD-9T-sEY" secondAttribute="bottom" id="P7G-lm-5MJ"/>
+                            <constraint firstItem="dOR-gH-zOQ" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="TWs-8h-sEz"/>
+                            <constraint firstItem="x3G-Zv-zSV" firstAttribute="top" secondItem="yWT-8Y-Zl0" secondAttribute="bottom" id="atA-dg-mns"/>
+                            <constraint firstItem="yWT-8Y-Zl0" firstAttribute="top" secondItem="pii-hE-znP" secondAttribute="bottom" constant="60" id="cCc-0I-80O"/>
+                            <constraint firstItem="VsD-9T-sEY" firstAttribute="top" secondItem="dOR-gH-zOQ" secondAttribute="bottom" id="lBk-Qo-2ib"/>
+                            <constraint firstItem="79R-vm-poW" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="lYA-cQ-fZn"/>
+                            <constraint firstItem="x3G-Zv-zSV" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="oXw-im-Au5"/>
+                            <constraint firstItem="yWT-8Y-Zl0" firstAttribute="centerX" secondItem="oQ1-ZP-u3X" secondAttribute="centerX" id="ujN-Pn-5PC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButtonOutlet" destination="Lgn-tO-oPT" id="uy3-nC-VFD"/>
+                        <outlet property="emailAddressTextField" destination="dOR-gH-zOQ" id="BAC-OA-Hu9"/>
+                        <outlet property="mainTitleLabel" destination="yWT-8Y-Zl0" id="QZJ-B2-xl6"/>
+                        <outlet property="nameTextField" destination="79R-vm-poW" id="oYv-66-wA2"/>
+                        <outlet property="passwordTextField" destination="VsD-9T-sEY" id="eH8-g1-L1N"/>
+                        <outlet property="subTitleLabel" destination="x3G-Zv-zSV" id="grj-r5-JZ4"/>
+                        <segue destination="iOA-TU-OPT" kind="show" identifier="logInSuccessfulSegue" id="EC8-c7-x09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXv-bs-wTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032" y="102"/>
+            <point key="canvasLocation" x="2031.2" y="101.19940029985008"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="agV-1c-GEX">
+            <objects>
+                <viewController id="iOA-TU-OPT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CV6-OE-2PN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oeg-aM-ZmV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dK6-80-RlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cookieMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-CV-qeH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vY-Ix-unF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557.5999999999999" y="937.78110944527748"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="atu-cZ-Fk5">
@@ -102,6 +285,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fingerprint.png" width="128" height="128"/>
+        <image name="cookie.png" width="256" height="256"/>
+        <image name="cookieMonster.png" width="375" height="667"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EC8-c7-x09"/>
+        <segue reference="OLy-jz-YBB"/>
+    </inferredMetricsTieBreakers>
 </document>
