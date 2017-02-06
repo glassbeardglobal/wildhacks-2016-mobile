@@ -1,15 +1,30 @@
 PODS:
   - Alamofire (4.1.0)
+  - DCKit (1.0.6)
+  - Socket.IO-Client-Swift (8.1.2)
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - DCKit (from `https://github.com/andrew8712/DCKit.git`)
+  - Socket.IO-Client-Swift
   - SwiftKeychainWrapper
+
+EXTERNAL SOURCES:
+  DCKit:
+    :git: https://github.com/andrew8712/DCKit.git
+
+CHECKOUT OPTIONS:
+  DCKit:
+    :commit: e663ea20d1d8031e0865479d56e93969b410b323
+    :git: https://github.com/andrew8712/DCKit.git
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  DCKit: ae5de8461680fe62c878cb0474355657b962d488
+  Socket.IO-Client-Swift: 542d82e6708f9901b3f6c1d134fb60fa0d09d4d1
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: c5671ef6ff766213cdb65759dafdcd2c08d69bb0
+PODFILE CHECKSUM: 49dd5e0d9ec98e225931edf0da12dfc101389626
 
 COCOAPODS: 1.1.1
